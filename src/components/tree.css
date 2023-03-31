@@ -1,0 +1,63 @@
+.tree-node {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border: 1px solid black;
+    border-radius: 50%;
+    font-size: 20px;
+    font-weight: bold;
+    position: relative;
+    box-sizing: border-box;
+    margin: 20px;
+  }
+  
+  .tree-node::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: -20px;
+    left: calc(50% - 1px);
+    width: 2px;
+    height: 20px;
+    background-color: black;
+    z-index: -1; /* Move the edge behind the node */
+  }
+  
+  .tree-node .left::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: calc(50% - 1px);
+    left: -20px;
+    width: 20px;
+    height: 2px;
+    background-color: black;
+    z-index: -1; /* Move the edge behind the node */
+  }
+  
+  .tree-node .right::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: calc(50% - 1px);
+    right: -20px;
+    width: 20px;
+    height: 2px;
+    background-color: black;
+    z-index: -1; /* Move the edge behind the node */
+  }
+  
+  .tree-node.selected {
+    border-color: red;
+  }
+  
+  .binary-tree {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    flex-wrap: wrap;
+  }
+  

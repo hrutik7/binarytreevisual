@@ -1,0 +1,8 @@
+.add-btn:disabled {
+    background: gray;
+
+}
+
+.add-btn:disabled:hover {
+    cursor: not-allowed;
+}
